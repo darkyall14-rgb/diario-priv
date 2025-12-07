@@ -1,0 +1,7 @@
+{
+  "buildCommand": "npm install",
+  "startCommand": "node app-prod.js",
+  "env": "node",
+  "region": "oregon",
+  "plan": "free"
+}
