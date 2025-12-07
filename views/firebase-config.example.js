@@ -2,12 +2,13 @@
 // Copia este archivo como 'firebase-config.js' y actualiza con tus valores reales
 
 export const firebaseConfig = {
-    apiKey: "AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    authDomain: "tu-proyecto.firebaseapp.com",
-    projectId: "tu-proyecto-id",
-    storageBucket: "tu-proyecto.appspot.com", 
-    messagingSenderId: "123456789012",
-    appId: "1:123456789012:web:abcdef1234567890abcdef"
+    apiKey: "AIzaSyDpqk1Kbfj4LSQtu4Q86aaII5PwB9YolzQ",
+    authDomain: "diario-b165d.firebaseapp.com",
+    databaseURL: "https://diario-b165d-default-rtdb.firebaseio.com",
+    projectId: "diario-b165d",
+    storageBucket: "diario-b165d.firebasestorage.app",
+    messagingSenderId: "613205028234",
+    appId: "1:613205028234:web:265501a11f4c0262df2c73"
 };
 
 // Pasos para obtener tu configuración:

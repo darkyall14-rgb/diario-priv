@@ -35,7 +35,6 @@ app.use('/diario', authMiddleware, diarioRoutes);
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "login.html"));
 });
-w
 app.get("/dashboard.html", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "dashboard.html"));
 });

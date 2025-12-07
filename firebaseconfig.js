@@ -7,11 +7,8 @@ if (!admin.apps.length) {
   if (fs.existsSync(saPath)) {
     try {
       const serviceAccount = require(saPath);
-      const projectId = serviceAccount.project_id;
-      const candidate1 = `https://${projectId}-default-rtdb.firebaseio.com`;
-      const candidate2 = `https://${projectId}.firebaseio.com`;
-      const databaseURL = process.env.FIREBASE_DATABASE_URL || candidate1 || candidate2;
-      console.log('[firebaseconfig] Inicializando admin. databaseURL=', databaseURL);
+      const databaseURL = process.env.FIREBASE_DATABASE_URL || "https://diario-b165d-default-rtdb.firebaseio.com";
+      console.log('[firebaseconfig] Inicializando admin con diario-b165d. databaseURL=', databaseURL);
       admin.initializeApp({
         credential: admin.credential.cert(serviceAccount),
         databaseURL
