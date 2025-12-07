@@ -23,6 +23,22 @@ app.use('/metas', authMiddleware, metaRoutes);
 app.use('/agenda', authMiddleware, agendaRoutes);
 app.use('/diario', authMiddleware, diarioRoutes);
 
+// Endpoint para servir configuración de Firebase
+app.get("/firebase-config.js", (req, res) => {
+  res.type('application/javascript');
+  res.send(`
+export const firebaseConfig = {
+  apiKey: "AIzaSyDpqk1Kbfj4LSQtu4Q86aaII5PwB9YolzQ",
+  authDomain: "diario-b165d.firebaseapp.com",
+  databaseURL: "https://diario-b165d-default-rtdb.firebaseio.com",
+  projectId: "diario-b165d",
+  storageBucket: "diario-b165d.firebasestorage.app",
+  messagingSenderId: "613205028234",
+  appId: "1:613205028234:web:265501a11f4c0262df2c73"
+};
+  `);
+});
+
 // Rutas de vistas
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "login.html"));
